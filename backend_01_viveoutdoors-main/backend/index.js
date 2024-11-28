@@ -66,21 +66,10 @@ const app = express();
 
 // Configuramos el puerto en el que escuchará nuestra aplicación
 const PORT = process.env.PORT_SERVER || 3000;
-app.use(
-  cors({
-    origin: "https://viveoficial.onrender.com",
-  })
-);
 
 // Iniciamos el servidor y mostramos un mensaje para confirmar que está funcionando
 app.listen(PORT, () => {
-  console.log(
-    `Servidor corriendo en ${
-      process.env.NODE_ENV === "PRODUCTION"
-        ? "https://viveoutdoors.onrender.com"
-        : `http://localhost:${PORT_SERVER}`
-    }`
-  );
+  console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
 
 // const { PORT, SECRET_JWT_KEY } = process.env;
