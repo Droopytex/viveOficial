@@ -4,6 +4,7 @@ import CarouselComponent from "../components/CarouselComponent";
 import CategoryCards from "../components/CategoryCards";
 import FeaturedProducts from "../components/FeaturedProducts";
 import BrandBanner from "../components/BrandBanner";
+import Suscripcion from "../components/Suscripcion";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <CategoryCards />
       <FeaturedProducts />
       <BrandBanner />
+      <Suscripcion />
     </div>
   );
 };
