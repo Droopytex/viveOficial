@@ -5,11 +5,12 @@ import SidebarTienda from "../components/SidebarTienda";
 import axios from "axios";
 
 const Tienda = () => {
+  const URL = import.meta.env.VITE_URL;
   const [productos, setProductos] = useState([]); //inicialmente es un arreglo vacío
 
   const obtenerTienda = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/tienda");
+      const response = await axios.get(URL + "/tienda");
       setProductos(response.data || []);
       console.log("Productos obtenidos para la tienda:", response.data);
     } catch (error) {
@@ -25,17 +26,16 @@ const Tienda = () => {
   const agregarAlCarrito = (producto) => {
     // Obtener el carrito actual del localStorage
     const carritoActual = JSON.parse(localStorage.getItem("carrito")) || [];
-  
+
     // Agregar el producto al carrito
     const nuevoCarrito = [...carritoActual, producto];
-  
+
     // Guarda el carrito actualizado en el localStorage
     localStorage.setItem("carrito", JSON.stringify(nuevoCarrito));
-  
+
     console.log("Producto añadido al carrito:", producto);
   };
 
-  
   return (
     <>
       <h1>Tienda</h1>
@@ -91,13 +91,14 @@ const Tienda = () => {
                         <Card.Title style={{ fontSize: "18px" }}>
                           {producto.producto_nombre}
                         </Card.Title>
-                        <Card.Text style={{ margin: "5px 0" }}> $ 
-                          {producto.producto_precio}
+                        <Card.Text style={{ margin: "5px 0" }}>
+                          {" "}
+                          ${producto.producto_precio}
                         </Card.Text>
 
                         <Button
                           style={{
-                            width: "100%",  // Botón ocupa todo el ancho
+                            width: "100%", // Botón ocupa todo el ancho
                             margin: "0 auto",
                             whiteSpace: "nowrap", // Evita que el texto del botón se corte
                             fontSize: "14px",

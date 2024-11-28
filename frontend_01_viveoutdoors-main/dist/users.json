@@ -1,0 +1,23 @@
+[
+  {
+    "id_usuario": 1,
+    "nombre": "Juan",
+    "apellido": "Pérez",
+    "e-mail": "jperez@gmail.com",
+    "telefono": "+569 999 999 23",
+    "contraseña":"12345",
+    "rol":"cliente"
+    
+  },
+
+  {
+    "id_usuario": 2,
+    "nombre": "Ana",
+    "apellido": "Jofré",
+    "e-mail": "ana@gmail.com",
+    "telefono": "+569 900 111 98",
+    "contraseña":"12345",
+    "rol":"admin"
+ 
+  }
+]

@@ -1,15 +1,16 @@
 import { useState, useEffect } from "react";
 import { Card, Button, Row, Col } from "react-bootstrap";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const MisPublicaciones = () => {
-    const navigate = useNavigate();
-        const [publicaciones, setPublicaciones] = useState([]); //inicialmente es un arreglo vacío
+  const URL = import.meta.env.VITE_URL;
+  const navigate = useNavigate();
+  const [publicaciones, setPublicaciones] = useState([]); //inicialmente es un arreglo vacío
 
   const obtenerPublicaciones = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/publicaciones");
+      const response = await axios.get(URL + "/publicaciones");
       setPublicaciones(response.data.obtenerPublicaciones || []);
       console.log(
         "Publicaciones obtenidas:",
@@ -43,7 +44,12 @@ const MisPublicaciones = () => {
     <div>
       <div className="d-flex justify-content-between align-items-center mb-4">
         <h2>Mis Publicaciones</h2>{" "}
-        <Button className="p-2" variant="warning" size="sm" onClick={() => navigate('/admin/crearpublicacion')}>
+        <Button
+          className="p-2"
+          variant="warning"
+          size="sm"
+          onClick={() => navigate("/admin/crearpublicacion")}
+        >
           Crear Publicación
         </Button>
       </div>
@@ -77,7 +83,9 @@ const MisPublicaciones = () => {
                     <Card.Body>
                       <Card.Title>{publicacion.producto_nombre}</Card.Title>
                       <Card.Text>{publicacion.producto_descripcion}</Card.Text>
-                      <Card.Text>Categoria: {publicacion.categoria_nombre}</Card.Text>
+                      <Card.Text>
+                        Categoria: {publicacion.categoria_nombre}
+                      </Card.Text>
                       <Card.Text>Precio: {publicacion.precio}</Card.Text>
                       <Card.Text>
                         Stock: {publicacion.stock} unidades disponibles

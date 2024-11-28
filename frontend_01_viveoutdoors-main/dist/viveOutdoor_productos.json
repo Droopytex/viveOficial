@@ -1,0 +1,34 @@
+// [
+//   {
+//     "nombre_producto": "SACO DE DORMIR NIÑOS MH100 10°C // Quechua",
+//     "categoria": "Sacos&colchones",
+//     "descrip": "Este saco de dormir se diseñó en el centro internacional de diseño a los pies del Mont Blanc, en Francia, después nuestros proveedores lo confeccionan y lo ensamblan en China, India y Bangladesh.",
+//     "stock": 45,
+//     "precio": 80.0,
+//     "img": "https://contents.mediadecathlon.com/p2579558/1cr1/k$6da4873ea03232fc57a8ab99c87df1dc/saco-de-dormir-ninos-mh100-10c-burdeo.jpg?format=auto&f=768x0"
+//   },
+//   {
+//     "nombre_producto": "Saco de dormir Bosque 250 // Inesca",
+//     "categoria": "Sacos&colchones",
+//     "descrip": "Saco de fibra de forma alpino para media montaña. Saco básico con buen aislamiento.Capucha ergonómica con alzacuello anti frio y cuello térmico en construcción 3D. Cremallera anti-bloqueo con 2 cursores que permiten la unión de 2 sacos.",
+//     "stock": 80,
+//     "precio": 40.0,
+//     "img": "https://www.inesca.com/88-thickbox_default/saco-de-dormir-bosque-250.jpg"
+//   },
+//   {
+//     "nombre_producto": "Saco de dormir Bosque 250 // Inesca",
+//     "categoria": "Sacos&colchones",
+//     "descrip": "Saco de fibra de forma alpino para media montaña. Saco básico con buen aislamiento.Capucha ergonómica con alzacuello anti frio y cuello térmico en construcción 3D. Cremallera anti-bloqueo con 2 cursores que permiten la unión de 2 sacos.",
+//     "stock": 60,
+//     "precio": 50.0,
+//     "img": "https://cdn.shopify.com/s/files/1/0526/8596/3456/files/1_f6467961-da45-4e0c-a6fa-4a30a0533ae4_600x600.jpg?v=1715007193"
+//   },
+//   {
+//     "nombre_producto": "Oventure Blaze Saco de Dormir | 230x80 cm | Modelo Momia con Capucha",
+//     "categoria": "Sacos&colchones",
+//     "descrip": "El SchmuBlaze es un saco de dormir momia ligero. Este modelo se conecta por completo, lo que permite aislar mejor el calor corporal y mantener un calor en el interior.",
+//     "stock": 60,
+//     "precio": 50.0,
+//     "img": "https://m.media-amazon.com/images/I/61c-KC8EP7L._AC_SL1200_.jpg"
+//   }
+// ]

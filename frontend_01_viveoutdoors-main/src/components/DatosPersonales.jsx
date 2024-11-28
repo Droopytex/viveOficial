@@ -1,4 +1,4 @@
-import { useState,  useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
   Button,
   Form,
@@ -12,10 +12,10 @@ import {
 import axios from "axios";
 
 const DatosPersonales = () => {
+  const URL = import.meta.env.VITE_URL;
   const [datos, setDatos] = useState(null); // Estado para almacenar los datos del usuario
   const [error, setError] = useState(null); // Estado para manejar errores
   const [show, setShow] = useState(false);
-
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -27,27 +27,23 @@ const DatosPersonales = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     try {
       const token = localStorage.getItem("token");
       if (!token) {
         console.error("Token no encontrado.");
         return;
       }
-  
+
       const config = {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       };
-  
+
       // const id_usuario = datos.id; // ID del usuario
-      const response = await axios.put(
-        `http://localhost:3000/datospersonales`,
-        datos,
-        config
-      );
-  
+      const response = await axios.put(URL + "/datospersonales", datos, config);
+
       setDatos(response.data); // Actualizar los datos
       handleClose();
       // fetchDatosPersonales(); // Recargar los datos del componente
@@ -55,7 +51,6 @@ const DatosPersonales = () => {
       console.error("Error al actualizar los datos:", error);
     }
   };
-  
 
   useEffect(() => {
     const fetchDatosPersonales = async () => {
@@ -71,7 +66,7 @@ const DatosPersonales = () => {
           },
         };
 
-        const response = await axios.get("http://localhost:3000/datospersonales", config);
+        const response = await axios.get(URL + "/datospersonales", config);
         setDatos(response.data); // Guardar los datos obtenidos en el estado
       } catch (err) {
         setError(err.message || "Error al obtener los datos personales");
@@ -88,9 +83,6 @@ const DatosPersonales = () => {
   if (!datos) {
     return <p>Cargando datos...</p>; // Mostrar mensaje mientras se cargan los datos
   }
-
-
-
 
   return (
     <Container>

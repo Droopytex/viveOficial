@@ -3,6 +3,7 @@ import { Form, Button, Modal } from "react-bootstrap";
 import axios from "axios";
 
 const CrearPublicacion = () => {
+  const URL = import.meta.env.VITE_URL;
   const [nombre, setNombre] = useState("");
   const [descripcion, setDescripcion] = useState("");
   const [precio, setPrecio] = useState("");
@@ -19,7 +20,7 @@ const CrearPublicacion = () => {
   useEffect(() => {
     const obtenerCategorias = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/categorias");
+        const response = await axios.get(URL + "/categorias");
         setCategorias(response.data);
       } catch (error) {
         console.error("Error al obtener las categorías:", error);
@@ -63,7 +64,7 @@ const CrearPublicacion = () => {
 
       // Enviar la solicitud POST con el token
       const respuesta = await axios.post(
-        "http://localhost:3000/crearpublicacion",
+        URL + "/crearpublicacion",
         payload,
         config // Aquí se pasa la configuración con los encabezados
       );
@@ -96,9 +97,9 @@ const CrearPublicacion = () => {
         console.error("Error al crear la publicación:", error);
         alert("Error al conectar con el servidor.");
       }
-        // Mostrar mensaje de error en el modal
-        setModalMessage(errorMsg);
-        setShowModal(true);
+      // Mostrar mensaje de error en el modal
+      setModalMessage(errorMsg);
+      setShowModal(true);
     }
   };
 
@@ -192,8 +193,8 @@ const CrearPublicacion = () => {
         </Button>
       </Form>
 
-           {/* Modal */}
-           <Modal show={showModal} onHide={() => setShowModal(false)}>
+      {/* Modal */}
+      <Modal show={showModal} onHide={() => setShowModal(false)}>
         <Modal.Header closeButton>
           <Modal.Title>Resultado</Modal.Title>
         </Modal.Header>
@@ -204,8 +205,6 @@ const CrearPublicacion = () => {
           </Button>
         </Modal.Footer>
       </Modal>
-
-      
     </div>
   );
 };
