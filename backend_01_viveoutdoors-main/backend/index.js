@@ -64,25 +64,19 @@ require("dotenv").config(); // Cargamos las variables de entorno desde el archiv
 // Creamos una instancia de Express
 const app = express();
 
-// Configuramos el puerto en el que escuchará nuestra aplicación
-const PORT = process.env.PORT_SERVER || 3000;
-app.use(
-  cors({
-    origin: "https://viveoficial.onrender.com",
-  })
-);
+const PORT = process.env.PORT || 5432;
 
 // Iniciamos el servidor y mostramos un mensaje para confirmar que está funcionando
 app.listen(PORT, () => {
-  console.log(
-    `Servidor corriendo en ${
-      process.env.NODE_ENV === "PRODUCTION"
-        ? "https://viveoutdoors.onrender.com"
-        : `http://localhost:${PORT_SERVER}`
-    }`
-  );
+  console.log(`Servidor corriendo en ${PORT}`);
 });
 
+// Configuración de CORS
+app.use(cors({
+  origin: 'https://viveoficial-1.onrender.com', // Cambia esto por la URL de tu frontend
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Métodos permitidos
+  credentials: true // Si necesitas enviar cookies o encabezados de autorización
+}));
 // const { PORT, SECRET_JWT_KEY } = process.env;
 
 // Middlewares
