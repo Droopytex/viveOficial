@@ -40,3 +40,8 @@
   background-color: warning;
   /* color: black; */
 }
+
+.suscrip {
+  display: flex;
+  justify-content: center;
+}

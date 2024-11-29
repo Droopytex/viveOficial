@@ -64,11 +64,19 @@ require("dotenv").config(); // Cargamos las variables de entorno desde el archiv
 // Creamos una instancia de Express
 const app = express();
 
+<<<<<<< HEAD
+=======
+// Configuramos el puerto en el que escuchará nuestra aplicación
+>>>>>>> ca2880839c70507c974a7a9becc30fd854a4243f
 const PORT = process.env.PORT || 5432;
 
 // Iniciamos el servidor y mostramos un mensaje para confirmar que está funcionando
 app.listen(PORT, () => {
+<<<<<<< HEAD
   console.log(`Servidor corriendo en ${PORT}`);
+=======
+  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+>>>>>>> ca2880839c70507c974a7a9becc30fd854a4243f
 });
 
 // Configuración de CORS
