@@ -31,7 +31,7 @@ La entrega de este hito será el link en producción de la aplicación cliente.
 De manera **LOCAL**: Se buscó que las cards pudieran extraer los datos desde la base datos, a diferncia de la entrega anterior donde dichos elementos usaban info desde un json local. Esto resulto en problemas de carga como las que se observan a continuación. 
 Vista del Home: 
 
-[Captura de Pantalla 2024-11-28 a la(s) 21 43 57](https://github.com/user-attachments/assets/ffe787af-f7c6-4f0e-85e2-736736cb6971)
+![Captura de Pantalla 2024-11-28 a la(s) 21 43 57](https://github.com/user-attachments/assets/3752b017-7443-4051-b2d7-8739c457df71)
 
 
 Vista de /account donde se muestran ambos formularios: 
