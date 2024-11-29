@@ -48,7 +48,11 @@ Vista sección Tienda (problema con las cards)
 
 ![Captura de Pantalla 2024-11-28 a la(s) 21 43 20](https://github.com/user-attachments/assets/51d75b54-3cdc-43be-bcfa-1558ed3afb1f)
 
- **Render**: Después de varias pruebas, se logró hacer el deploy a los elementos. sin embargo los problemas de carga de recursos aumentó. Solo caragó relativamente bien el Home, sin embargo las demas secciones desaparecieron.
+ **Render**: Después de varias pruebas, se logró hacer el deploy a los elementos. sin embargo los problemas de carga de recursos aumentó. Solo cargó relativamente bien el Home, sin embargo las demas secciones desaparecieron.
+ 
+
+![Captura de Pantalla 2024-11-28 a la(s) 21 40 26](https://github.com/user-attachments/assets/4dd30163-c284-486b-9922-71da3e1f81d8)
+ 
 
 ![Captura de Pantalla 2024-11-28 a la(s) 21 41 57](https://github.com/user-attachments/assets/ba5c772e-edc0-48a7-b3bf-ff217bdf020f)
 
